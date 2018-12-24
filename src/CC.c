@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "caesar/caesar.c"
+#include <string.h>
+#include "caesar.h"
 
 int okArgs (int argc, char ** argv) {
 	if(argc != 4) return 0;
@@ -14,11 +15,10 @@ int string2int(const char *s) {
 		r *= 10;
 		r += s[i]-'0';
 	}
-	printf("%d",r);
 	return r;
 }
 
-void printUsage() { printf("Usage:\n\t./CC [-d|-e] filename key\n\t-d:\tDecrypt\n\t-e:\tEncrypt"); }
+void printUsage() { printf("Usage:\n\t./CC [-d|-e] filename key\n\t-d:\tDecrypt\n\t-e:\tEncrypt\r\n"); }
 
 int modifyAll ( FILE *fp, int key, char *(*modifier)(const char *c,int key) ) {
 	char *c = malloc(sizeof(char));
@@ -48,5 +48,6 @@ int main(int argc, char **argv)
 		modifyAll(fp,string2int(argv[3]),CCenc);
 	else
 		modifyAll(fp,string2int(argv[3]),CCdec);
+	printf("Done\r\n");
 	return 0;
 }
