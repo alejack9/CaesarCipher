@@ -1,7 +1,13 @@
-Usage:<br />
-    *  ./CC<br />
-        *  print usage<br />
-    *  ./CC -e filename key<br />
-        *  encrypt file with the gotten key<br />
-    *  ./CC -d filenamne key<br />
-        *  depript file with the gotten key<br />
+## Build
+
+*   make all
+    *   to build the project
+
+## Usage:<br />
+
+*   ./CC
+    *   print usage
+*   ./CC -e filename key
+    *   encrypt file with the gotten key
+*   ./CC -d filenamne key
+    *   depript file with the gotten key
