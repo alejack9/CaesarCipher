@@ -1,7 +1,7 @@
 ## Build
 
 *   make all
-    *   to build the project
+    *   build the project
 
 ## Usage:<br />
 
